@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+
+# Vercel
+.vercel/
+
+# Logs / local
+*.log
+*.local
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For you ✨</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="dark">
+  <div class="room" id="room">
+    <!-- String lights -->
+    <div class="lights-wrap" id="lights-wrap" aria-hidden="true">
+      <ul class="string-lights">
+        <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+      </ul>
+    </div>
+
+    <!-- Decorations -->
+    <div class="bunting" id="bunting" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
+
+    <!-- Balloons -->
+    <div class="balloons" id="balloons" aria-hidden="true"></div>
+
+    <!-- Confetti layer -->
+    <div class="confetti-layer" id="confetti-layer" aria-hidden="true"></div>
+
+    <!-- Cake -->
+    <div class="cake-scene" id="cake-scene" aria-hidden="true">
+      <div class="cake" id="cake">
+        <div class="cake-top"></div>
+        <div class="cake-middle"></div>
+        <div class="cake-bottom"></div>
+        <div class="candle">
+          <div class="flame" id="flame"></div>
+        </div>
+        <div class="cake-slice" id="cake-slice"></div>
+      </div>
+      <p class="cake-hint" id="cake-hint">Tap to cut the cake 🎂</p>
+    </div>
+
+    <!-- Prompt -->
+    <div class="prompt-wrap" id="prompt-wrap">
+      <p class="prompt-text" id="prompt-text"></p>
+      <button class="prompt-btn" id="prompt-btn" type="button"></button>
+    </div>
+
+    <!-- Message popup -->
+    <div class="message-overlay hidden" id="message-overlay">
+      <div class="message-card" id="message-card">
+        <p class="message-label">For you 💌</p>
+        <p class="message-body" id="message-body"></p>
+        <p class="message-signed" id="message-signed"></p>
+      </div>
+    </div>
+  </div>
+
+  <audio id="bg-music" loop preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
