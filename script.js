@@ -20,9 +20,13 @@ const STEPS = [
 
 let step = 0;
 let musicStarted = false;
+let musicPlaysLeft = 0;
 let cakeShown = false;
 let cakeCut = false;
 let waitingForCakeCut = false;
+
+/** Full track plays this many times, then stops. */
+const MUSIC_PLAY_COUNT = 2;
 
 const promptText = document.getElementById("prompt-text");
 const promptBtn = document.getElementById("prompt-btn");
@@ -109,7 +113,20 @@ function playMusic() {
 
   if (CONFIG.musicUrl) {
     bgMusic.src = CONFIG.musicUrl;
+    bgMusic.loop = false;
     bgMusic.volume = 0.45;
+    musicPlaysLeft = MUSIC_PLAY_COUNT;
+    bgMusic.onended = () => {
+      musicPlaysLeft -= 1;
+      if (musicPlaysLeft > 0) {
+        bgMusic.currentTime = 0;
+        void bgMusic.play().catch(() => {});
+      } else {
+        bgMusic.onended = null;
+        bgMusic.pause();
+        bgMusic.currentTime = 0;
+      }
+    };
     bgMusic.play().catch(() => playFallbackTune());
   } else {
     playFallbackTune();

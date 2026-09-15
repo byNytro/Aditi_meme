@@ -44,4 +44,4 @@ const CONFIG = {
 };
 ```
 
-Drop an MP3 into `music/birthday.mp3` for real background music. If the file is missing, a short tune plays instead.
+Drop an MP3 into `music/birthday.mp3` for real background music. It plays **twice**, then stops. If the file is missing, a short tune plays instead.
