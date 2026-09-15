@@ -39,7 +39,7 @@ Edit the top of **`script.js`**:
 const CONFIG = {
   name: "Aditi",
   message: "Your message here...",
-  signed: "— With love",
+  signed: "— Without Pyar",
   musicUrl: "music/birthday.mp3",  // add your mp3 to music/ folder
 };
 ```

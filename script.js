@@ -4,7 +4,7 @@ const CONFIG = {
   message:
     "Happy birthday! I made this little surprise just for you. " +
     "You mean so much to me — hope this made you smile. More coming soon 💕",
-  signed: "— With love",
+  signed: "— With love (I already feel cringed out with so many hearts FFS)",
   // Optional: add music/birthday.mp3 — falls back to a soft tune if missing
   musicUrl: "music/birthday.mp3",
 };
